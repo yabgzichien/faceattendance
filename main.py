@@ -95,7 +95,7 @@ class App:
                 d = time.mktime(d.timetuple())
                 obj = {"name": name, "checkIn" : d}
                 headers = {"Content-type": "application/json"}
-                requests.post('http://localhost:5000/checkIn', json=obj, headers=headers)
+                requests.post('https://faceattendance-backend.vercel.app/checkIn', json=obj, headers=headers)
             else: 
                 print("There is no nigga")
 
@@ -115,7 +115,7 @@ class App:
                 d = time.mktime(d.timetuple())
                 obj = {"name": name, "checkout" : d}
                 headers = {"Content-type": "application/json"}
-                requests.post('http://localhost:5000/checkout', json=obj, headers=headers)
+                requests.post('https://faceattendance-backend.vercel.app/checkout', json=obj, headers=headers)
             else: 
                 print("There is no nigga")
 
