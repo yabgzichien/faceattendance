@@ -24,6 +24,7 @@ class App:
                 self.known_face_name.append(image)
 
         self.main_window = tk.Tk()
+        self.main_window.title("Face ID")
         self.main_window.geometry("1200x520+350+100")
 
 
@@ -97,7 +98,7 @@ class App:
                 headers = {"Content-type": "application/json"}
                 requests.post('https://faceattendance-backend.vercel.app/checkIn', json=obj, headers=headers)
             else: 
-                print("There is no nigga")
+                print("Unknown person")
 
 
     def checkout(self):
@@ -117,7 +118,7 @@ class App:
                 headers = {"Content-type": "application/json"}
                 requests.post('https://faceattendance-backend.vercel.app/checkout', json=obj, headers=headers)
             else: 
-                print("There is no nigga")
+                print("Unknown Person")
 
 
         
@@ -140,7 +141,7 @@ class App:
         self.input = utils.get_entry_text(self.register_window)
         self.input.place(x=750, y=150)
 
-        self.input_text = utils.get_text_label(self.register_window, "What's up nigga")
+        self.input_text = utils.get_text_label(self.register_window, "Hey there :)")
         self.input_text.place(x=750, y=50)
 
     
